@@ -290,6 +290,19 @@
                  document.getElementById('sidebar').classList.add('d-none');
             }
         });
+        document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openSidebarBtn');
+        const closeBtn = document.getElementById('closeSidebarBtn');
+    
+        openBtn?.addEventListener('click', () => {
+            sidebar.classList.remove('d-none');
+        });
+    
+        closeBtn?.addEventListener('click', () => {
+            sidebar.classList.add('d-none');
+        });
+    });
     </script>
 
     @stack('scripts')
