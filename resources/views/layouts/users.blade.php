@@ -222,6 +222,20 @@
                 theme: 'bootstrap-5' // Jika Anda menggunakan Bootstrap 5 dan ingin tampilan yang cocok
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('openSidebarBtn');
+    const closeBtn = document.getElementById('closeSidebarBtn');
+
+    openBtn?.addEventListener('click', () => {
+        sidebar.classList.remove('d-none');
+    });
+
+    closeBtn?.addEventListener('click', () => {
+        sidebar.classList.add('d-none');
+    });
+});
     </script>
 </body>
 </html>
